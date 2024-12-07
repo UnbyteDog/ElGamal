@@ -9,8 +9,8 @@ unsigned long long generateLargePrime() {
 
     unsigned long long num;
     do {
-        num = dist(gen);  // 随机生成一个大数
-    } while (!millerRabin(num));  // 判断是否为素数
+        num = dist(gen);
+    } while (!millerRabin(num));
     return num;
 }
 
