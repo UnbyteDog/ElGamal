@@ -1,7 +1,14 @@
+#include "ElGamal.h"
 #include<iostream>
 
 int main()
 {
-	std::cout << 1;
-	return 0;
+    unsigned long long num = generateLargePrime();
+    if (millerRabin(num)) {
+        std::cout << num << " is prime!" << std::endl;
+    }
+    else {
+        std::cout << num << " is not prime." << std::endl;
+    }
+    return 0;
 }
