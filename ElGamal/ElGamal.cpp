@@ -54,6 +54,13 @@ int main()
     std::cout << "解密后明文：" << std::endl;
     for (int i = 0; i < m.size(); i++)
     {
+        std::cout << cipher[i];
+        std::cout << "\t";
+        if (i % 2 != 0) std::cout << std::endl;
+    }
+    std::cout << "解密后明文转字符：" << std::endl;
+    for (int i = 0; i < m.size(); i++)
+    {
         std::cout << (char)cipher[i];
     }
 
@@ -65,6 +72,6 @@ int main()
     //unsigned long long dm = decrypt(C1, C2, a, p);
     //std::cout << "明文dm：" << dm << std::endl;
 
-
+    std::getchar();
     return 0;
 }
