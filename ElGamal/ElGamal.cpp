@@ -21,12 +21,12 @@ int main()
     unsigned long long r = chooseRandomAlpha(p);
     std::cout << "随机数r：" << r << std::endl;
 
-    std::string m;
+    std::wstring m;
     //m = "Hi,this is ElGamal!";
-    std::cout << "输入明文m："<< std::endl;
-    std::getline(std::cin, m);
-    std::cout << "明文m："<< std::endl;
-    std::cout << m << std::endl;
+    std::wcout << "输入明文m："<< std::endl;
+    std::getline(std::wcin, m);
+    std::wcout << "明文m："<< std::endl;
+    std::wcout << m << std::endl;
 
     unsigned long long cipher[SIZE] = { 0 };
 
@@ -40,11 +40,11 @@ int main()
     std::cout << "密文：" << std::endl;
     for (int i = 0; i < m.size(); i++)
     {
-        std::cout << cipher[i];
-        std::cout << "\t";
-        if(i%2!=0) std::cout << std::endl;
+        std::wcout << cipher[i];
+        std::wcout << "\t";
+        if(i%2!=0) std::wcout << std::endl;
     }
-    std::cout << std::endl;
+    std::wcout << std::endl;
 
 
     for (int i = 0; i < m.size(); i++)
@@ -54,14 +54,14 @@ int main()
     std::cout << "解密后明文：" << std::endl;
     for (int i = 0; i < m.size(); i++)
     {
-        std::cout << cipher[i];
-        std::cout << "\t";
+        std::wcout << cipher[i];
+        std::wcout << "\t";
         if (i % 2 != 0) std::cout << std::endl;
     }
     std::cout << "解密后明文转字符：" << std::endl;
     for (int i = 0; i < m.size(); i++)
     {
-        std::cout << (char)cipher[i];
+        std::wcout << (char)cipher[i];
     }
 
     
